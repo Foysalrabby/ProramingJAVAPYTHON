@@ -1,2 +1,45 @@
 countword=len("this is my name".split())
 print(countword);
+
+
+public class HelloWorld {
+   
+    static final int stateout = 0;
+    static  final int stateIn = 1;
+   
+    
+ static int counword(String str){
+     int i = 0;
+     int wordget=0;
+     int state = stateout;
+     while(i < str.length()){
+        //  if (str.charAt(i) == ' ' || str.charAt(i) == '\n'
+        //             || str.charAt(i) == '\t'){
+        //                 state = stateout;
+        //             }
+                
+          if (str.charAt(i) == ' '|| str.charAt(i) == '\n'|| str.charAt(i) == '\t') {
+              
+              state=stateout;
+              
+          }
+          else if(state == stateout){
+              
+               state=stateIn;
+               ++ wordget;
+          }
+          
+          ++i;
+         
+         
+     }
+  
+     return wordget;
+ }
+ 
+  public static void main(String[] args) {
+        String str = "One two    hi   three\n four\tfive  ";
+       // System.out.println(str.length());
+         System.out.println(counword(str));
+    }
+}
