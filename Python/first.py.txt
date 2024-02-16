@@ -1,0 +1,2 @@
+countword=len("this is my name".split())
+print(countword);
